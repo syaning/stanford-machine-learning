@@ -28,11 +28,12 @@ def normal_equations(X, y):
     theta = np.dot(np.dot(np.linalg.inv(np.dot(X.T, X)), X.T), y)
     return theta
 
-# Part 1: Feature Normalization
+# ================ Part 1: Feature Normalization ================
+print('Loading data ...')
 data = np.loadtxt('ex1data2.txt', delimiter=',')
-X = data[:, 0:2]
-y = data[:, 2:]
-m = y.shape[0]
+X = data[:, 0:-1]
+y = data[:, -1:]
+m = y.size
 
 print('First 10 examples from the dataset:')
 for i in range(10):
@@ -42,12 +43,13 @@ print('Normalizing Features ...')
 X, mu, sigma = normalize_feature(X)
 X = np.hstack((np.ones((X.shape[0], 1)), X))
 
-# Part 2: Gradient Descent
+# ================ Part 2: Gradient Descent ================
 print('Running gradient descent ...')
 alpha, iters = 0.01, 400
 theta = np.zeros((X.shape[1], 1))
 theta, J_history = gradient_descent_multi(X, y, theta, alpha, iters)
 
+# Plot the convergence graph
 plt.plot(range(1, len(J_history) + 1), J_history)
 plt.xlabel('Number of iterations')
 plt.ylabel('Cost J')
@@ -60,7 +62,7 @@ print(theta)
 price = np.dot([1, (1650 - mu[0]) / sigma[0], (3 - mu[1]) / sigma[1]], theta)
 print('Predicted price of a 1650 sq-ft, 3 br house (using gradient descent): %f' % price)
 
-# Part 3: Normal Equations
+# ================ Part 3: Normal Equations ================
 print('Solving with normal equations...')
 X = np.hstack((np.ones((data.shape[0], 1)), data[:, 0:2]))
 y = data[:, 2:]
