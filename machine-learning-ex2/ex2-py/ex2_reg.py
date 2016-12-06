@@ -16,7 +16,7 @@ def map_feature(x1, x2):
     return np.hstack(cols)
 
 
-def cost_function_eg(theta, x, y, lmbda):
+def cost_function_reg(theta, x, y, lmbda):
     theta = theta.reshape((theta.size, 1))
     m = y.size
     h = sigmoid(x.dot(theta))
@@ -55,11 +55,11 @@ x = map_feature(data[:, [0]], data[:, [1]])
 y = data[:, [2]]
 initial_theta = np.zeros(x.shape[1])
 lmbda = 1
-cost = cost_function_eg(initial_theta, x, y, lmbda)
+cost = cost_function_reg(initial_theta, x, y, lmbda)
 print('Cost at initial theta (zeros): %f' % cost)
 
 # ============= Part 2: Regularization and Accuracies =============
-theta = fmin_bfgs(cost_function_eg, initial_theta,
+theta = fmin_bfgs(cost_function_reg, initial_theta,
                   fprime=gradient_reg, args=(x, y, lmbda))
 u = np.linspace(-1, 1.5, 50)
 v = np.linspace(-1, 1.5, 50)

@@ -18,7 +18,7 @@ def cost_function(theta, x, y):
 def gradient(theta, x, y):
     theta = theta.reshape((theta.size, 1))
     h = sigmoid(x.dot(theta))
-    grad = np.dot(x.T, h - y) / m
+    grad = np.dot(x.T, h - y) / y.size
     return grad.flatten()
 
 
