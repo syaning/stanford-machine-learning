@@ -2,19 +2,9 @@ import numpy as np
 from scipy.io import loadmat
 
 from displayData import displayData
+from sigmoid import sigmoid
+from predict import predict
 
-
-def sigmoid(z):
-    return 1 / (1 + np.exp(-z))
-
-
-def predict(Theta1, Theta2, X):
-    m = X.shape[0]
-    a1 = np.hstack((np.ones((m, 1)), X))
-    a2 = np.hstack((np.ones((m, 1)), sigmoid(a1.dot(Theta1.T))))
-    a3 = sigmoid(a2.dot(Theta2.T))
-    p = np.argmax(a3, axis=1) + 1
-    return p.reshape((p.size, 1))
 
 # =========== Part 1: Loading and Visualizing Data =============
 # We start the exercise by first loading and visualizing the dataset.
@@ -30,6 +20,7 @@ rand_indices = np.random.permutation(range(m))
 sel = X[rand_indices[0:100], :]
 displayData(sel)
 
+
 # ================ Part 2: Loading Pameters ================
 # In this part of the exercise, we load some pre-initialized
 # neural network parameters.
@@ -38,13 +29,14 @@ params = loadmat('ex3weights.mat')
 Theta1 = params['Theta1']
 Theta2 = params['Theta2']
 
+
 # ================= Part 3: Implement Predict =================
 # After training the neural network, we would like to use it to predict
 # the labels. You will now implement the "predict" function to use the
 # neural network to predict the labels of the training set. This lets
 # you compute the training set accuracy.
-pred = predict(Theta1, Theta2, X)
-accuracy = np.mean((pred == y).astype(int))
+p = predict(Theta1, Theta2, X)
+accuracy = np.mean((p == y).astype(int))
 print('Training Set Accuracy: %.2f %%' % (accuracy * 100))
 
 # To give you an idea of the network's output, you can also run
