@@ -37,6 +37,7 @@ Theta1, Theta2 = parameters['Theta1'], parameters['Theta2']
 # Unroll parameters
 nn_params = np.hstack((Theta1.T.ravel(), Theta2.T.ravel()))
 
+
 # ================ Part 3: Compute Cost (Feedforward) ================
 # To the neural network, you should first start by implementing the
 # feedforward part of the neural network that returns the cost only. You
