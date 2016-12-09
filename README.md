@@ -6,6 +6,7 @@
 - [Exercise 2: Logistic Regression](./machine-learning-ex2)
 - [Exercise 3: Multi-class Classification and Neural Networks](./machine-learning-ex3)
 - [Exercise 4: Neural Network Learning](./machine-learning-ex4)
+- [Exercise 5: Regularized Linear Regression and Bias/Variance](./machine-learning-ex5)
 
 ## Links
 
