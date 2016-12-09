@@ -10,7 +10,7 @@ def plotData(x, y):
 
 
 def plotData2(theta, X, y):
-    plt.plot(X[:, 1], y, 'b+')
+    plt.scatter(X[:, 1], y, marker='+')
     plt.plot(X, X.dot(theta), 'r')
     plt.xlim(5)
     plt.xlabel('Population of City in 10,000s')
