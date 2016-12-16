@@ -7,6 +7,7 @@
 - [Exercise 3: Multi-class Classification and Neural Networks](./machine-learning-ex3)
 - [Exercise 4: Neural Network Learning](./machine-learning-ex4)
 - [Exercise 5: Regularized Linear Regression and Bias/Variance](./machine-learning-ex5)
+- [Exercise 6: Support Vector Machines](./machine-learning-ex6)
 
 ## Links
 
