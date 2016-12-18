@@ -6,6 +6,7 @@ from plotData import plotData
 from gaussianKernel import gaussianKernel
 from visualizeBoundary import visualizeBoundary
 from visualizeBoundaryLinear import visualizeBoundaryLinear
+from dataset3Params import dataset3Params
 
 
 # =============== Part 1: Loading and Visualizing Data ================
@@ -77,4 +78,15 @@ visualizeBoundary(X, y, model)
 print('Loading and Visualizing Data ...\n')
 data = loadmat('ex6data3.mat')
 X, y = data['X'], data['y']
+Xval, yval = data['Xval'], data['yval']
 plotData(X, y)
+
+
+# ========== Part 7: Training SVM with RBF Kernel (Dataset 3) ==========
+# This is a different dataset that you can use to experiment with. Try
+# different values of C and sigma here.
+C, sigma = dataset3Params(X, y, Xval, yval)
+gamma = 1 / (2 * sigma**2)
+clf = svm.SVC(C=C, kernel='rbf', tol=1e-3, max_iter=200, gamma=gamma)
+model = clf.fit(X, y.ravel())
+visualizeBoundary(X, y, model)
