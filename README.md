@@ -8,6 +8,7 @@
 - [Exercise 4: Neural Network Learning](./machine-learning-ex4)
 - [Exercise 5: Regularized Linear Regression and Bias/Variance](./machine-learning-ex5)
 - [Exercise 6: Support Vector Machines](./machine-learning-ex6)
+- [Exercise 7: K-Means Clustering and PCA](./machine-learning-ex7)
 
 ## Links
 
