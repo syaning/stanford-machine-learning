@@ -118,6 +118,3 @@ fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
 fprintf('# Outliers found: %d\n', sum(p < epsilon));
 fprintf('   (you should see a value epsilon of about 1.38e-18)\n\n');
 pause
-
-
-
