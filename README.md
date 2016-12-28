@@ -9,6 +9,7 @@
 - [Exercise 5: Regularized Linear Regression and Bias/Variance](./machine-learning-ex5)
 - [Exercise 6: Support Vector Machines](./machine-learning-ex6)
 - [Exercise 7: K-Means Clustering and PCA](./machine-learning-ex7)
+- [Exercise 8: Anomaly Detection and Recommender Systems](./machine-learning-ex8)
 
 ## Links
 
