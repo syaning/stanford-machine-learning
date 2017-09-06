@@ -19,7 +19,6 @@ print(warmUpExercise(), '\n')
 print('Plotting Data ...\n')
 data = np.loadtxt('ex1data1.txt', delimiter=',')
 X, y = data[:, 0], data[:, 1]
-m = data.shape[0]
 plotData(X, y)
 
 
