@@ -14,5 +14,6 @@
 ## Links
 
 - [Coursera](https://www.coursera.org/learn/machine-learning/home/welcome)
+- [Installation Issue with matplotlib Python](https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python)
 - [Fix "peer certificate" when submit](https://www.coursera.org/learn/machine-learning/discussions/forums/8LDwTL2SEeSEJSIACyEKsQ/threads/_et09TGlEea-YhKdNUv9pQ)
 - [Exercise 6 bug: unknown hggroup property Color](http://joyhuang9473.github.io/post-machine-learning/2015/11/22/coursera-stanford-machine-learning-class-week7-assignment.html)
